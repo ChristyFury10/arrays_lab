@@ -50,7 +50,7 @@ Exercise 5:
 
 // Complete Exercise 5 below...
 
-foods.splice(1, 0, "tofu");
+foods.splice(2, 0, "tofu");
 
 console.log('Exercise 5 Result: ', foods);
 
@@ -61,7 +61,7 @@ Exercise 6:
 
 // Complete Exercise 6 below...
 
-foods.splice(2, 1, "sushi", "cupcake")
+foods.splice(1, 1, "sushi", "cupcake")
 
 console.log('Exercise 6 Result: ', foods);
 
