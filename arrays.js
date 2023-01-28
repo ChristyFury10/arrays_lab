@@ -16,6 +16,7 @@ Exercise 2:
 
 // Complete Exercise 2 below...
 
+foods.push("pizza", "cheeseburger");
 
 
 console.log('Exercise 2 Result: ',  foods);
@@ -27,7 +28,7 @@ Exercise 3:
 
 // Complete Exercise 3 below...
 
-
+foods.unshift("tacos");
 
 console.log('Exercise 3 Result: ', foods);
 
@@ -38,7 +39,7 @@ Exercise 4:
 
 // Complete Exercise 4 below...
 
-
+let favFood = foods[1];
 
 console.log('Exercise 4 Result: ', favFood);
 
@@ -49,7 +50,7 @@ Exercise 5:
 
 // Complete Exercise 5 below...
 
-
+foods.splice(1, 0, "tofu");
 
 console.log('Exercise 5 Result: ', foods);
 
@@ -60,7 +61,7 @@ Exercise 6:
 
 // Complete Exercise 6 below...
 
-
+foods.splice(2, 1, "sushi", "cupcake")
 
 console.log('Exercise 6 Result: ', foods);
 
@@ -72,7 +73,7 @@ Exercise 7:
 
 // Complete Exercise 7 below...
 
-
+yummy = foods.slice(2,4)
 
 console.log('Exercise 7 Result: ', yummy);
 
@@ -83,7 +84,7 @@ Exercise 8:
 
 // Complete Exercise 8 below...
 
-
+let soyIdx = foods.indexOf("tofu");
 
 console.log('Exercise 8 Result: ', soyIdx);
 
@@ -95,9 +96,18 @@ Exercise 9:
 
 // Complete Exercise 9 below...
 
+      //let allFoods = foods.join("->");
 
-
+let allFoods = " ";
+for(i=0; i< foods.length; i++){
+    if (i != foods.length -1){
+      allFoods += foods[i] + "->";
+    }
+    else allFoods += foods[i];
+}
 console.log('Exercise 9 Result: ', allFoods);
+
+
 
 /*
 Exercise 10:
@@ -106,7 +116,13 @@ Exercise 10:
 
 // Complete Exercise 10 below...
 
+let hasSoup = false;
 
+for(let i = 0; i < foods.length; i++){
+  if (foods[i] === "tacos") {
+    hasSoup = true;
+  }
+}
 
 console.log('Exercise 10 Result: ', hasSoup);
 
@@ -123,7 +139,12 @@ const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 // Complete Exercise 11 below...
 
-
+let odds = [];
+for (let i = 0; i < nums.length; i++){
+  if (nums[i] % 2 !== 0){
+    odds.push(nums[i]);    
+  }
+};
 
 console.log('Exercise 11 Result: ', odds);
 
@@ -137,7 +158,21 @@ Exercise 12:
 
 // Complete Exercise 12 below...
 
+let fizz = [];
+let buzz = [];
+let  fizzbuzz = [];
 
+for (let i = 0; i < nums.length; i++){
+  if (nums[i] % 3 === 0 && nums[i] % 5 === 0){
+   fizzbuzz.push(nums[i]);
+  }
+  if (nums[i] % 3 === 0){
+    fizz.push(nums[i]);
+  }
+  if (nums[i] % 5 === 0){
+    buzz.push(nums[i]);
+  }
+}
 
 console.log('Exercise 12 Results:');
 console.log('  fizz:', fizz);
@@ -159,7 +194,8 @@ const numArrays = [
 
 // Complete Exercise 13 below...
 
-
+numList = [];
+numList = (numArrays[numArrays.length -1]);
 
 console.log('Exercise 13 Result: ', numList);
 
@@ -170,7 +206,7 @@ Exercise 14:
 
 // Complete Exercise 14 below...
 
-
+num = numArrays[2][1]; 
 
 console.log('Exercise 14 Result: ', num);
 
@@ -181,7 +217,13 @@ Exercise 15:
 */
 
 // Complete Exercise 15 below...
+let total = 0;
 
+for(let i = 0; i < numArrays.length; i++) {
+  for(let j = 0; j < numArrays[i].length; j++) {
+    total += numArrays[i][j];
+  }
+}
 
 
 console.log('Exercise 15 Result: ', total);
